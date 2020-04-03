@@ -12,7 +12,6 @@ def timeConversion(s):
     if is_pm and hh_mm_ss_int_list[0] < 12:
         hh_mm_ss_int_list[0] += 12
     elif not is_pm:
-        print('I''m here')
         hh_mm_ss_int_list[0] -= 12 if hh_mm_ss_int_list[0] == 12 else 0
 
     hh_mm_ss_str_list = list(map(lambda el: f"{el:02d}", hh_mm_ss_int_list))
