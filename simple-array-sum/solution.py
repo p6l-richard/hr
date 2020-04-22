@@ -2,7 +2,9 @@
 #
 # Complete the simpleArraySum function below.
 #
-
+# INSTRUCTIONS
+# 1st: run unit test `python -m unittest test_solution`
+# 2nd: run `python -m solution.py`
 
 inp = """6
 1 2 3 4 10 11"""
@@ -24,16 +26,10 @@ def parse_input(inp):
     arr = list(map(lambda el: float(el), lines[1].split()))
     return [length, arr]
 
-
-
 def simpleArraySum(ar):
     length, arr = parse_input(ar)   
     if not length:
-        print('No values')
         raise TypeError('The input is not correctly formatted.', ar)
-    print(length, arr)
-    # result = simpleArraySum(ar)
-    # print(result)
-    return ''
+    return sum(arr)
 
-simpleArraySum(inp)
+print('Input:\n', inp, '\n\nSum:',simpleArraySum(inp))
