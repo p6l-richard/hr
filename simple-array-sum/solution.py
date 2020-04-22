@@ -10,7 +10,7 @@ inp = """6
 1 2 3 4 10 11"""
 
 def parse_input(inp):
-    stripped = inp.strip()
+    stripped = str(inp).strip()
     lines = list(filter(None, stripped.splitlines()))
     if not len(lines) == 2:
         return 'Input does not contain 2 lines'
